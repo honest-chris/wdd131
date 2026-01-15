@@ -3,10 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oseghale Home page</title>
+    <title>"WDD 131- Dynamic Web Fundamentals- Honest O. Christopher"</title>
+    <meta name="descriptions" content="WDD 131 – Dynamic Web Fundamentals, Honest O. Christopher, HTML, CSS, JavaScript, web development fundamentals">
+    <meta name="author" content="Oseghale Christopher">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>The Road show</h1>
-    <p>Its a new day to be in the world</p>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="https://www.linkedin.com/in/honest-oseghale?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="ose linkedIn">LinkedIn</a>
+            <a href="https://byupw.instructure.com/courses/32243" target="WDD_course">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?lang=eng&id=p26-p27#p26" target="2Nephi25:26-27">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Oseghale H. Christopher</h1>
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="card-content">
+                <p>
+                    My name is Honest O. Christopher. I am a multidisciplinary professional with a background in
+                    microbiology, pharmacy, and software development. I am currently studying software development
+                    through BYU Pathway Worldwide and BYU Idaho. I enjoy reading, traveling, public speaking, and
+                    learning new technologies.
+                </p>
+
+                <img src="images/profile_image.jpg" alt="Portrait of oseghale">
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Country Information</h2>
+            <div class="card-content">
+                <img src="images/Nigeria_flag.jpg" alt="Flag of Nigeria">
+
+                <p>
+                    Nigeria is located in West Africa and is known for its rich cultural diversity, entrepreneurial
+                    spirit, and growing technology ecosystem. It is Africa’s most populous country and plays a key
+                    role in regional economic development.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            © <span id="currentyear"></span> Honest O. Christopher | Nigeria
+        </p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,132 @@
+/* ================================
+   Global Variables (Color Scheme)
+   ================================ */
+:root {
+    --primary-color: #1f4e79;
+    --secondary-color: #2f2f2f;
+    --accent-color: #e0e0e0;
+    --background-color: #f4f6f8;
+    --card-background: #ffffff;
+}
+
+/* ================================
+   Global Reset
+   ================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================================
+   Base Typography
+   ================================ */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* ================================
+   Header
+   ================================ */
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 1.25rem;
+}
+
+/* Required: span must be block */
+#course-title {
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+/* ================================
+   Navigation (CSS Flex)
+   ================================ */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Required: Hover Effect */
+nav a:hover {
+    background-color: #163a5c;
+    color: #ffffff;
+}
+
+/* ================================
+   Main Layout
+   ================================ */
+main {
+    max-width: 960px; /* limited width */
+    margin: 2rem auto; /* centered horizontally */
+    padding: 0 1rem;
+}
+
+/* Page Title */
+main h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ================================
+   Card Layout (CSS Grid)
+   ================================ */
+.card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Card Headings */
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Grid layout for card content */
+.card-content {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* Images */
+.card img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+/* ================================
+   Footer
+   ================================ */
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
