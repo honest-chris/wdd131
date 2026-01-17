@@ -4,13 +4,12 @@
     }
 
     nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        display: block;
     }
 
-    nav a {
-        border: none;
+    nav ul {
+       flex-direction: row;
+       justify-content: center;
     }
 
     .gallery {
