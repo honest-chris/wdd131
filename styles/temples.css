@@ -11,7 +11,7 @@
 }
 
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--text-colour);
     background-color: var(--secondary-colour);
 }
@@ -19,6 +19,7 @@ body {
 header{
     background-color: var(--primary-colour);
     color: white;
+    padding: 0.7rem;
 }
 
 .header-content {
@@ -28,7 +29,7 @@ header{
     padding: 1.5rem;
 }
 header h2 {
-    font-family: 'playfair display' , serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #menu-button {
@@ -43,13 +44,14 @@ nav {
     display: none;
     flex-direction: column;
     background-color: var(--primary-colour);
+    margin: 0 auto 2rem;
 }
 
 nav a {
     padding: 1rem;
     text-decoration: none;
     color: white;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(25, 25, 25, 0.2);
 }
 
 nav a:hover {

@@ -1,18 +1,21 @@
-// Display current year
-// Footer Date Information
-const yearSpan = document.querySelector("#year");
-const modifiedSpan = document.querySelector("#last-modified");
+console.log("Temples JS loaded");
 
-// Display last modified date
-yearSpan.textContent = new Date().getFullYear();
-modifiedSpan.textContent = document.lastModified;
+// Footer dates
+const currentYear = new Date().getFullYear();
+document.getElementById("currentyear").textContent = currentYear;
+document.getElementById("last-modified").textContent =
+    "Last Modification: " + document.lastModified;
 
+// Hamburger menu
+const menuButton = document.getElementById("menu-button");
+const navMenu = document.getElementById("nav-menu");
 
-// Hamburger Menu
-const menuButton = document.querySelector("#menu-button");
-const navMenu = document.querySelector("#nav-menu");
-
-menuButton.addEventListener("click", () => {
+menuButton.addEventListener("click", function () {
   navMenu.classList.toggle("open");
-  menuButton.textContent = navMenu.classList.contains("open") ? "✖" : "☰";
+
+  if (navMenu.classList.contains("open")) {
+    menuButton.textContent = "✖";
+  } else {
+    menuButton.textContent = "☰";
+  }
 });
