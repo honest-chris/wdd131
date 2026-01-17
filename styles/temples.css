@@ -1,7 +1,7 @@
 :root{
---primary-colour:#2f4f4f;
+--primary-colour:#69f7f7;
 --secondary-colour: #f4f4f4;
---accent-colour: #cfa44a;
+--accent-colour: #f6f5f3;
 --text-colour: #222;
  }
 *{
@@ -19,21 +19,22 @@ body {
 header{
     background-color: var(--primary-colour);
     color: white;
-    padding: 0.7rem;
+    padding: 1rem;
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 header h2 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'playfair Display', serif;
+    font-size: 1.5rem;
 }
 
 #menu-button {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     background: none;
     border: none;
     color: white;
@@ -44,14 +45,15 @@ nav {
     display: none;
     flex-direction: column;
     background-color: var(--primary-colour);
-    margin: 0 auto 2rem;
 }
 
 nav a {
     padding: 1rem;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: rgb(254, 227, 227);
     color: white;
-    border-top: 1px solid rgba(25, 25, 25, 0.2);
+    font-weight: 550;
+    border-top: 1px solid rgba(225, 249, 236, 0.4);
 }
 
 nav a:hover {
@@ -76,7 +78,7 @@ main h1 {
 
 .gallery {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 

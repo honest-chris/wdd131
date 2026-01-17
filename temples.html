@@ -7,6 +7,11 @@
     <meta name="description" content="Temple Album show casting the beautiful temple structures in Africa.">
     <meta name="author" content="Oseghale">
 
+     <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
    <!-- CSS file link -->
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
@@ -20,8 +25,6 @@
             <h2>Temple Album</h2>
             <button id="menu-button" aria-label="Open Menu">&#9776;</button>
         </div>
-
-        <ul>
             <nav id="nav-menu">
                 <li><a href="home">Home</a></li>
                 <li><a href="old">Old</a></li>
@@ -29,13 +32,13 @@
                 <li><a href="large">Large</a></li>
                 <li><a href="small">Small</a></li>
             </nav>
-        </ul>
     </header>
 
     <main>
         <h1>Beautiful Images of Africa Temples</h1>
 
-        <section class="gallery">
+        <div class="gallery">
+
             <figure><img src="images/aba-nigeria-temple.jpg" alt="Aba Nigeria Temple">
                 <figcaption>Aba Nigeria Temple</figcaption>
             </figure>
@@ -61,7 +64,7 @@
             <figcaption>Abidjan Ivory Coast Temple</figcaption></figure>
             
 
-            <figure><img src="images/antananarivo-madagascar-temple.jpg" alt="Antananarivo madagascar Temple">
+            <figure><img src="images/antananarivo-temple.jpg" alt="Antananarivo madagascar Temple">
             <figcaption>Antananarivo Madagascar Temple</figcaption></figure>
             
 
@@ -76,17 +79,17 @@
             <figure><img src="images/durban-south-africa-temple.jpg" alt="Durban SA Temple">
             <figcaption>Durban South Africa Temple</figcaption></figure>
             
-        <figure><img src="images/kinshasa-democratic-republic-of-the-congo-temple.jpg" alt="Kinshasa DRC Temple">
+        <figure><img src="images/kinshasa-temple.jpg" alt="Kinshasa DRC Temple">
             <figcaption>Kinshasa Democratic Republic of the Congo Temple</figcaption></figure>
 
     <figure><img src="images/praia-cape-verde-temple.jpg" alt="praia cape verde Temple">
             <figcaption>Praia Cape Verde Temple</figcaption></figure>
-        </section>
+        </div>
     </main>
 
     <footer>
          <p> © <span id="currentyear"></span>♦️Honest O. Christopher ♦️ Nigeria</p>
-        <p>lastModified:<span id="lastModified"></span></p>
+        <p> Last Modified: <span id="last-Modified"></span></p>
     </footer>
 </body>
 </html>
