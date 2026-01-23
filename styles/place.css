@@ -1,0 +1,98 @@
+:root {
+  --primary: #008751;
+  --secondary: #ffffff;
+  --accent: #fcd116;
+  --text: #222;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--secondary);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.layout {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.data, .weather {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.data h2, .weather h2 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.data ul, .weather ul {
+  list-style: none;
+}
+
+.data li, .weather li {
+  margin-bottom: 0.4rem;
+}
+
+.weather-icon {
+  width: 50px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* pseudo-element for large view */
+@media (min-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: start;
+  }
+
+  .hero {
+    grid-column: 2 / 3;
+  }
+
+  .data {
+    grid-column: 1 / 2;
+  }
+
+  .weather {
+    grid-column: 3 / 4;
+  }
+
+  .weather h2::after {
+    content: " ⛅";
+    font-size: 1.2rem;
+  }
+}
+
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
