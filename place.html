@@ -1,59 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benin, Cotonou</title>
-    <meta name="description" content="">
-    <meta name="author" content="Oseghale C.H">
-    <link rel="stylesheet" href="styles/place.css">
-    <script src="scripts/place.js" defer></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Benin, Cotonou</title>
+        <meta name="description" content="Cotonou is the economic capital of Benin, known for its coastal beauty, vibrant markets, and rich West African culture."/>
+        <meta name="author" content="Oseghale C.H">
+        <link rel="stylesheet" href="styles/place.css"/>
+        <script src="scripts/place.js" defer></script>
+    </head>
+
 <body>
-    <h1>Benin, Cotonou</h1>
+    <header>
+       <h1>Cotonou, Benin</h1>
+    </header>
 
-    <main class="layout">
+    <main>
+        <section class="hero">
         <!--Hero Image-->
-        <div class="hero">
             <picture>
-                <source srcset="images/" media="(min-width: 768px)">
-                <img src="images/cotonou.webp" alt="Scenic view of Cotonou, Benin">
+                <source srcset="images/cotonou.webp" media="(min-width: 768px)">
+                <img src="images/cotonou-small.webp" alt="Scenic view of Cotonou, Benin">
             </picture>
-        </div>
 
-        <!-- Data Section -->
-        <section class="data">
-            <h2>Data</h2>
-            <ul>
-                <li><strong>Area:</strong> 114,763 sq km</li>
-                <li><strong>Population:</strong> 13,500,000+</li>
-                <li><strong>Capital:</strong> Porto-Novo</li>
-                <li><strong>Largest City:</strong> Cotonou</li>
-                <li><strong>Languages:</strong> French</li>
-                <li><strong>Currency:</strong>  West African CFA franc (XOF)</li>
-                <li><strong>Time Zone:</strong> UTC+1</li>
-                <li><strong>Calling Code:</strong> +229</li>
-                <li><strong>Internet TLD:</strong> .bj</li>
-            </ul>
+            <!-- Data Section -->
+            <div class="hero-grid">
+                <section class="data">
+                    <h2>Data</h2>
+                    <ul>
+                        <li><strong>Area:</strong> 114,763 sq km</li>
+                        <li><strong>Population:</strong> 13,500,000+</li>
+                        <li><strong>Capital:</strong> Porto-Novo</li>
+                        <li><strong>Largest City:</strong> Cotonou</li>
+                        <li><strong>Languages:</strong> French</li>
+                        <li><strong>Currency:</strong>  West African CFA franc (XOF)</li>
+                        <li><strong>Time Zone:</strong> UTC+1</li>
+                        <li><strong>Calling Code:</strong> +229</li>
+                        <li><strong>Internet TLD:</strong> .bj</li>
+                    </ul>
+                </section>
+
+                <!-- Weather Section -->
+                <section class="weather">
+                    <h2>Weather</h2>
+                    <img src="images/weather.svg" alt="Weather icon" class="weather-icon">
+                    <ul>
+                        <li><strong>Temperature:</strong> <span id="temp">10</span> °C</li>
+                        <li><strong>Conditions:</strong> Partly Cloudy</li>
+                        <li><strong>Wind:</strong> <span id="speed">6</span> km/h</li>
+                        <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
+                    </ul>
+                </section>
+            </div>
         </section>
+    </main>
 
-        <!-- Weather Section -->
-        <section class="weather">
-            <h2>Weather</h2>
-            <img src="images/weather.svg" alt="Weather icon" class="weather-icon">
-            <ul>
-                <li><strong>Temperature:</strong> <span id="temp">10</span> °C</li>
-                <li><strong>Conditions:</strong> Partly Cloudy</li>
-                <li><strong>Wind:</strong> <span id="speed">6</span> km/h</li>
-                <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
-            </ul>
-        </section>
-</main>
-
-<footer>
-  <p>&copy; <span id="year"></span> Honest O. Christopher • Nigeria</p>
-  <p>Last Modified: <span id="lastModified"></span></p>
-</footer>
+    <footer>
+        <p>&copy; <span id="year"></span> Honest O. Christopher • Nigeria</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
     
 </body>
 </html>

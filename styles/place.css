@@ -1,8 +1,7 @@
 :root {
-  --primary: #008751;
-  --secondary: #ffffff;
-  --accent: #fcd116;
+  --primary: #4df566;
   --text: #222;
+  --card-bag: rgba(255, 255, 255, 0.88);
 }
 
 * {
@@ -13,8 +12,6 @@
 
 body {
   font-family: system-ui, sans-serif;
-  background: var(--secondary);
-  color: var(--text);
   line-height: 1.6;
 }
 
@@ -25,74 +22,64 @@ header {
   padding: 1rem;
 }
 
-.layout {
-  display: grid;
-  gap: 1rem;
-  padding: 1rem;
+main{ max-width: 1100px;
+margin: 0 auto;}
+
+.hero{
+  position: relative;
 }
 
-.hero img {
+.hero picture img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 4px;
 }
 
-.data, .weather {
-  border: 1px solid #ddd;
+/* GRID OVER IMAGE */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   padding: 1rem;
-  border-radius: 6px;
-  background: #fafafa;
+  align-items: start;
 }
 
-.data h2, .weather h2 {
+/* CARDS*/
+.data, .weather {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: var(--card-bag);
+}
+
+h2 {
   margin-bottom: 0.5rem;
   color: var(--primary);
 }
 
-.data ul, .weather ul {
+ul {
   list-style: none;
-}
-
-.data li, .weather li {
-  margin-bottom: 0.4rem;
 }
 
 .weather-icon {
   width: 50px;
-  height: auto;
   margin-bottom: 0.5rem;
 }
 
-/* pseudo-element for large view */
-@media (min-width: 768px) {
-  .layout {
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: start;
-  }
-
-  .hero {
-    grid-column: 2 / 3;
-  }
-
-  .data {
-    grid-column: 1 / 2;
-  }
-
-  .weather {
-    grid-column: 3 / 4;
-  }
-
-  .weather h2::after {
-    content: " ⛅";
-    font-size: 1.2rem;
-  }
-}
-
 footer {
-  background: var(--primary);
+  background-color: var(--primary);
   color: white;
   text-align: center;
   padding: 1rem;
-  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* MOBILE VIEW*/
+@media (max-width: 767px) {
+  .hero-grid {
+    position: static;
+    grid-template-columns: 1fr;
+  }
 }
