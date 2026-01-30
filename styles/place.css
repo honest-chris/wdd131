@@ -1,16 +1,15 @@
 :root {
   --primary: #4df566;
   --text: #222;
-  --card-bag: rgba(255, 255, 255, 0.88);
+  --white-glass: rgba(255, 255, 255, 0.88);
 }
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
+  margin: 0;
   font-family: system-ui, sans-serif;
   line-height: 1.6;
 }
@@ -22,51 +21,40 @@ header {
   padding: 1rem;
 }
 
-main{ max-width: 1100px;
-margin: 0 auto;}
-
 .hero{
   position: relative;
 }
 
-.hero picture img {
+.hero img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* GRID OVER IMAGE */
+/* MOBILE DEFAULT */
 .hero-grid {
-  position: absolute;
-  inset: 0;
-
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
   padding: 1rem;
-  align-items: start;
 }
 
-/* CARDS*/
-.data, .weather {
+.data,
+.weather {
+  background-color: white;
   padding: 1rem;
-  border-radius: 0.5rem;
-  background: var(--card-bag);
+  margin-bottom: 1rem;
 }
 
-h2 {
-  margin-bottom: 0.5rem;
-  color: white;
-  background-color: var(--primary);
+/* REMOVE h2 BACKGROUND ON MOBILE */
+.data h2,
+.weather h2 {
+  margin-top: 0;
 }
 
-ul {
-  list-style: none;
-}
-
+/* WEATHER ICON */
 .weather-icon {
   width: 50px;
-  margin-bottom: 0.5rem;
+  display: block;
+  margin: 0 auto 0.5rem;
 }
 
 footer {
@@ -74,13 +62,48 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
-/* MOBILE VIEW*/
-@media (max-width: 767px) {
+/* ========================= */
+/* DESKTOP VIEW (OVERLAY) */
+/* ========================= */
+@media (min-width: 768px) {
+
   .hero-grid {
-    position: static;
-    grid-template-columns: 1fr;
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .data,
+  .weather {
+    background-color: var(--white-glass);
+    max-width: 300px;
+  }
+
+  .data {
+    justify-self: start;
+  }
+
+  .weather {
+    justify-self: end;
+    text-align: center;
+  }
+
+  /* h2 BACKGROUND ONLY ON DESKTOP */
+  .data h2,
+  .weather h2 {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.5rem;
+  }
+
+  /* EMOJI AFTER WEATHER TITLE */
+  .weather h2::after {
+    content: " ⛅";
   }
 }
