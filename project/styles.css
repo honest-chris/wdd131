@@ -1,9 +1,11 @@
+/* Global Styles */
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
     background-color: #F9FAFB;
 }
 
+/* Header */
 header {
     background-color: #1E3A8A;
     color: white;
@@ -12,15 +14,18 @@ header {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Headings */
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
     color: #1E3A8A;
 }
 
+/* Main content */
 main {
     padding: 1.5rem;
 }
 
+/* Sections */
 section {
     background: white;
     padding: 1rem;
@@ -28,17 +33,20 @@ section {
     border-left: 6px solid #1E3A8A;
 }
 
+/* Accent color demo */
 .color-demo {
     color: #F59E0B;
     font-weight: bold;
 }
 
+/* Wireframes */
 pre {
     background: #f4f4f4;
     padding: 1rem;
     overflow-x: auto;
 }
 
+/* Footer */
 footer {
     background-color: #1E3A8A;
     color: white;
